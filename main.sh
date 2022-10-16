@@ -40,7 +40,7 @@ source /root/.bashrc
 INSTALL (){
 #-----------КОМПИЛЯЦИЯ БИНАРНОГО ФАЙЛА------------
 cd /
-
+cp /usr/local/go/bin/go /usr/bin/
 echo ==============================
 go version
 echo ==============================
