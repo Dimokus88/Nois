@@ -69,7 +69,7 @@ git clone --depth 1 --branch "${WASMD_TAG}" https://github.com/CosmWasm/wasmd.gi
         -trimpath ./cmd/wasmd
 
 mkdir -p out
-cp /tmp/wasmd/build/noisd /tmp/wasmd/out
+cp /tmp/wasmd/build/wasmd /tmp/wasmd/out/$binary
 cp /tmp/wasmd/out/$binary /usr/bin/$binary
 $binary version
 #-------------------------------------------------
