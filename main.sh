@@ -93,9 +93,7 @@ rm /root/$WORK_FOLDER/config/genesis.json
 	DENOM=`cat $HOME/$folder/config/genesis.json | grep denom -m 1 | tr -d \"\, | sed "s/denom://" | tr -d \ `
 	echo 'export DENOM='${DENOM} >> /root/.bashrc
 	else
-	curl -s "$SNAP_RPC"/genesis | jq .result.genesis >> /root/$WORK_FOLDER/config/genesis.json
-	DENOM=`curl -s "$SNAP_RPC"/genesis | grep denom -m 1 | tr -d \"\, | sed "s/denom://" | tr -d \ `
-	echo 'export DENOM='${DENOM} >> /root/.bashrc
+	wget -O "$HOME/.noisd/config/genesis.json" https://raw.githubusercontent.com/noislabs/testnets/main/nois-testnet-003/genesis.json
 	fi
 echo $DENOM
 sleep 5
