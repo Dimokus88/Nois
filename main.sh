@@ -20,8 +20,7 @@ runsvdir -P /etc/service &
 if [[ -n $SNAP_RPC ]]
 then 
 CHAIN=`curl -s "$SNAP_RPC"/status | jq -r .result.node_info.network`
-WORK_FOLDER=`curl -s "$SNAP_RPC"/abci_info | jq -r .result.response.data`
-WORK_FOLDER=`echo $WORK_FOLDER | sed "s/$WORK_FOLDER/.$WORK_FOLDER/"`
+WORK_FOLDER=".noisd"
 fi
 SHIFT=1000
 echo $CHAIN
