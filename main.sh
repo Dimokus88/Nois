@@ -40,6 +40,11 @@ source /root/.bashrc
 INSTALL (){
 #-----------КОМПИЛЯЦИЯ БИНАРНОГО ФАЙЛА------------
 cd /
+
+echo ==============================
+go version
+echo ==============================
+sleep 10
 binary=noisd
 BECH32_PREFIX=nois
 WASMD_VERSION=0.29.0-rc2
@@ -47,11 +52,8 @@ WASMD_TAG="v$WASMD_VERSION"
 
 # Re-create tmp directory
 rm -rf /tmp && mkdir /tmp
-
-(
-  cd tmp
-  git clone --depth 1 --branch "${WASMD_TAG}" https://github.com/CosmWasm/wasmd.git
-  (
+cd tmp
+git clone --depth 1 --branch "${WASMD_TAG}" https://github.com/CosmWasm/wasmd.git
     cd wasmd
     WASMD_COMMIT_HASH=$(git rev-parse HEAD)
     mkdir build
@@ -65,8 +67,6 @@ rm -rf /tmp && mkdir /tmp
         -X github.com/CosmWasm/wasmd/app.Bech32Prefix=${BECH32_PREFIX} \
         -X 'github.com/cosmos/cosmos-sdk/version.BuildTags=netgo,ledger'" \
         -trimpath ./cmd/wasmd
-  )
-)
 
 mkdir -p out
 cp /tmp/wasmd/build/noisd /tmp/wasmd/out
