@@ -71,6 +71,7 @@ mkdir -p out
 cp /tmp/wasmd/build/wasmd /tmp/wasmd/out/$binary
 cp /tmp/wasmd/out/$binary /usr/bin/$binary
 $binary version
+echo 'export binary='${binary} >> /root/.bashrc
 #-------------------------------------------------
 
 #=======ИНИЦИАЛИЗАЦИЯ БИНАРНОГО ФАЙЛА================
