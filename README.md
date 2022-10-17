@@ -35,7 +35,7 @@ ___
 # English version
 ### Deployment of the Nois node.
 
-Deploy [deploy.yml](https://github.com/Dimokus88/EmpowerChain/blob/main/deploy.yml) **Nois** nodes with **Cloudmos (Akashlytics)** ( [use instructions here](https://github.com/Dimokus88/guides/blob/main/Akashlytics/EN-guide.md) ) by setting the values ​​in the corresponding `deploy.yml` variables:
+Deploy [deploy.yml](https://github.com/Dimokus88/Nois/blob/main/deploy.yml) **Nois** nodes with **Cloudmos (Akashlytics)** ( [use instructions here](https://github.com/Dimokus88/guides/blob/main/Akashlytics/EN-guide.md) ) by setting the values ​​in the corresponding `deploy.yml` variables:
 - **MY_ROOT_PASSWORD** - your password for the `root` user.
 - **MONIKER**-node name.
 - **LINK_KEY**-link to direct download of `priv_validator_key.json`* file.
@@ -94,7 +94,7 @@ $binary tx distribution withdraw-rewards $valoper --from $address --fees 10000$D
 ```
 Other commands for managing a node [can be found here](https://github.com/Dimokus88/guides/blob/main/Cosmos%20SDK/COMMAND.MD).
 
-[Back to top](https://github.com/Dimokus88/EmpowerChain/blob/main/README.md#EmpowerChain-validator-node-on-akash-network)
+[Back to top](https://github.com/Dimokus88/Nois/blob/main/README.md#Nois-validator-node-on-akash-network)
 
 **Thank you for using Akash Network!**
 
@@ -102,7 +102,7 @@ ___
 # Русская версия
 ### Развертка ноды Nois.
 
-Разверните [deploy.yml](https://github.com/Dimokus88/EmpowerChain/blob/main/deploy.yml) ноды **Nois** с помощью **Cloudmos (Akashlytics)**  ([инструкция по использованию здесь](https://github.com/Dimokus88/guides/blob/main/Akashlytics/RU-guide.md)) установив значения в соответствующих переменных  `deploy.yml`: 
+Разверните [deploy.yml](https://github.com/Dimokus88/Nois/blob/main/deploy.yml) ноды **Nois** с помощью **Cloudmos (Akashlytics)**  ([инструкция по использованию здесь](https://github.com/Dimokus88/guides/blob/main/Akashlytics/RU-guide.md)) установив значения в соответствующих переменных  `deploy.yml`: 
 - **MY_ROOT_PASSWORD**-свой пароль для `root` пользователя
 - **MONIKER**-имя ноды  
 - **LINK_KEY**-ссылку на прямое скачивание файла `priv_validator_key.json`* 
@@ -161,7 +161,7 @@ $binary tx distribution withdraw-rewards $valoper --from $address --fees 10000$D
 ```
 Другие команды по управлению нодой [можете найти здесь](https://github.com/Dimokus88/guides/blob/main/Cosmos%20SDK/COMMAND.MD).
 
-[К началу](https://github.com/Dimokus88/EmpowerChain/blob/main/README.md#EmpowerChain-validator-node-on-akash-network)
+[К началу](https://github.com/Dimokus88/Nois/blob/main/README.md#Nois-validator-node-on-akash-network)
 
 **Спасибо что воспользовались Akash Network!**
 ___
