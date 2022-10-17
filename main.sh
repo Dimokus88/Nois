@@ -89,11 +89,11 @@ rm /root/$WORK_FOLDER/config/genesis.json
 	if [[ -n $GENESIS ]]
 	then
 	wget -O $HOME/$folder/config/genesis.json $GENESIS
-	DENOM=`cat $HOME/$folder/config/genesis.json | grep denom -m 1 | tr -d \"\, | sed "s/denom://" | tr -d \ `
+	DENOM=unois
 	echo 'export DENOM='${DENOM} >> /root/.bashrc
 	else
 	wget -O "$HOME/.noisd/config/genesis.json" https://raw.githubusercontent.com/noislabs/testnets/main/nois-testnet-003/genesis.json
-	DENOM=`cat $HOME/$folder/config/genesis.json | grep denom -m 1 | tr -d \"\, | sed "s/denom://" | tr -d \ `
+	DENOM=unois
 	echo 'export DENOM='${DENOM} >> /root/.bashrc
 	fi
 echo $DENOM
@@ -156,7 +156,7 @@ fi
 echo $PEER
 echo $SEED
 sleep 5
-sed -i.bak -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.05$DENOM\"/;" /root/$WORK_FOLDER/config/app.toml
+sed -i.bak -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.05unois\"/;" /root/$WORK_FOLDER/config/app.toml
 sleep 1
 sed -i.bak -e "s/^seeds *=.*/seeds = \"$SEED\"/;" /root/$WORK_FOLDER/config/config.toml
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEER\"/;" /root/$WORK_FOLDER/config/config.toml
